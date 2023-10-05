@@ -5,7 +5,9 @@ edit_uri: edit/main
 
 docs_dir: src
 nav:
+  - About: index.md
   - Demo: 1-demo.rzk.md
+  - Exercises: 2-exercises.rzk.md
 
 markdown_extensions:
   - admonition
