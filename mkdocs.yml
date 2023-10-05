@@ -1,0 +1,75 @@
+site_name: "Rzk demo for HoTTEST, October 5, 2023"
+repo_url: https://github.com/fizruk/hottest-2023-rzk-demo
+repo_name: fizruk/hottest-2023-rzk-demo
+edit_uri: edit/main
+
+docs_dir: src
+nav:
+  - Demo: 1-demo.rzk.md
+
+markdown_extensions:
+  - admonition
+  - footnotes
+  - pymdownx.details
+  - mdx_math
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+theme:
+  name: material
+  custom_dir: overrides
+  logo: assets/images/logo-1000x1000.png
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
+  features:
+    - content.code.copy
+    - content.action.edit
+    - navigation.footer
+    - navigation.sections
+    - navigation.path
+    - toc.integrate
+  font:
+    code: Fira Mono
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      primary: blue
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      primary: purple
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+extra_javascript:
+  - javascript/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - assets/css/rzk-render.css
+
+plugins:
+  - search
+  - rzk:
+      render_svg: false # multi-file projects are not supported well
+      anchor_definitions: true
